@@ -1,0 +1,65 @@
+PODS:
+  - FormatterKit/Resources (1.8.2)
+  - FormatterKit/TimeIntervalFormatter (1.8.2):
+    - FormatterKit/Resources
+  - LetsMove (1.25)
+  - MASPreferences (1.1.4)
+  - Sentry (7.3.0):
+    - Sentry/Core (= 7.3.0)
+  - Sentry/Core (7.3.0)
+  - TransformerKit (1.1.1):
+    - TransformerKit/Core (= 1.1.1)
+    - TransformerKit/Cryptography (= 1.1.1)
+    - TransformerKit/Data (= 1.1.1)
+    - TransformerKit/Date (= 1.1.1)
+    - TransformerKit/Image (= 1.1.1)
+    - TransformerKit/JSON (= 1.1.1)
+    - TransformerKit/String (= 1.1.1)
+  - TransformerKit/Core (1.1.1)
+  - TransformerKit/Cryptography (1.1.1):
+    - TransformerKit/Core
+  - TransformerKit/Data (1.1.1):
+    - TransformerKit/Core
+  - TransformerKit/Date (1.1.1):
+    - TransformerKit/Core
+  - TransformerKit/Image (1.1.1):
+    - TransformerKit/Core
+  - TransformerKit/JSON (1.1.1):
+    - TransformerKit/Core
+  - TransformerKit/String (1.1.1):
+    - TransformerKit/Core
+
+DEPENDENCIES:
+  - FormatterKit/TimeIntervalFormatter (~> 1.8.0)
+  - LetsMove (~> 1.24)
+  - MASPreferences (~> 1.1.4)
+  - Sentry (from `https://github.com/getsentry/sentry-cocoa.git`, tag `7.3.0`)
+  - TransformerKit (~> 1.1.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - FormatterKit
+    - LetsMove
+    - MASPreferences
+    - TransformerKit
+
+EXTERNAL SOURCES:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 7.3.0
+
+CHECKOUT OPTIONS:
+  Sentry:
+    :git: https://github.com/getsentry/sentry-cocoa.git
+    :tag: 7.3.0
+
+SPEC CHECKSUMS:
+  FormatterKit: 4b8f29acc9b872d5d12a63efb560661e8f2e1b98
+  LetsMove: 7b9fe44737707d984fbd3f47af46609a9a07b461
+  MASPreferences: 7bdcfe891d7840453cf48f95fa866c3e152ace7a
+  Sentry: 9a4e621430e2dae4477d791f2f7e905720b6efbf
+  TransformerKit: 1295d491e9999960afdedcb0a163489827efd169
+
+PODFILE CHECKSUM: cbb535a25c342531d4467c932b93d9e68ffc2347
+
+COCOAPODS: 1.16.2
