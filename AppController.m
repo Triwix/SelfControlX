@@ -93,6 +93,7 @@
 - (NSString*)menuBarDurationTitleForMinutes:(NSInteger)minutes;
 - (void)menuBarRefreshTimerFired:(NSTimer*)timer;
 - (void)ensureRegularActivationPolicy;
+- (BOOL)windowCountsForActivationPolicy:(NSWindow*)window;
 - (void)refreshActivationPolicyForVisibleWindows;
 - (void)handleWindowVisibilityChanged:(NSNotification*)notification;
 - (IBAction)openSelfControlX:(id)sender;
@@ -752,6 +753,13 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed: (NSApplication*) theApplication {
     (void)theApplication;
     // Keep the app alive so menu bar controls remain available until an explicit quit.
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self refreshActivationPolicyForVisibleWindows];
+    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)),
+                   dispatch_get_main_queue(), ^{
+        [self refreshActivationPolicyForVisibleWindows];
+    });
     return NO;
 }
 
@@ -784,6 +792,23 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
     }
 }
 
+- (BOOL)windowCountsForActivationPolicy:(NSWindow*)window {
+    if (window == nil || !window.isVisible) {
+        return NO;
+    }
+
+    NSString* windowClassName = NSStringFromClass(window.class);
+    if ([windowClassName containsString: @"NSStatusBarWindow"]) {
+        return NO;
+    }
+
+    if (![window canBecomeMainWindow] && ![window canBecomeKeyWindow]) {
+        return NO;
+    }
+
+    return YES;
+}
+
 - (void)refreshActivationPolicyForVisibleWindows {
     if (![NSThread isMainThread]) {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -794,7 +819,7 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
 
     BOOL hasVisibleWindow = NO;
     for (NSWindow* window in NSApp.windows) {
-        if (window.isVisible) {
+        if ([self windowCountsForActivationPolicy: window]) {
             hasVisibleWindow = YES;
             break;
         }
@@ -812,6 +837,10 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
     (void)notification;
     dispatch_async(dispatch_get_main_queue(), ^{
         [self refreshActivationPolicyForVisibleWindows];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)),
+                       dispatch_get_main_queue(), ^{
+            [self refreshActivationPolicyForVisibleWindows];
+        });
     });
 }
 
