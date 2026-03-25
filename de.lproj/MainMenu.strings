@@ -1,0 +1,147 @@
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "5"; */
+"5.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Fenster"; ObjectID = "19"; */
+"19.title" = "Fenster";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "23"; */
+"23.title" = "Minimize";
+
+/* Class = "NSMenu"; title = "Fenster"; ObjectID = "24"; */
+"24.title" = "Fenster";
+
+/* Class = "NSMenu"; title = "AMainMenu"; ObjectID = "29"; */
+"29.title" = "AMainMenu";
+
+/* Class = "NSMenuItem"; title = "SelfControl"; ObjectID = "56"; */
+"56.title" = "SelfControl";
+
+/* Class = "NSMenu"; title = "SelfControl"; ObjectID = "57"; */
+"57.title" = "SelfControl";
+
+/* Class = "NSMenuItem"; title = "Über SelfControl"; ObjectID = "58"; */
+"58.title" = "Über SelfControl";
+
+/* Class = "NSMenu"; title = "Dienste"; ObjectID = "130"; */
+"130.title" = "Dienste";
+
+/* Class = "NSMenuItem"; title = "Dienste"; ObjectID = "131"; */
+"131.title" = "Dienste";
+
+/* Class = "NSMenuItem"; title = "SelfControl verstecken"; ObjectID = "134"; */
+"134.title" = "SelfControl verstecken";
+
+/* Class = "NSMenuItem"; title = "SelfControl beenden"; ObjectID = "136"; */
+"136.title" = "SelfControl beenden";
+
+/* Class = "NSMenuItem"; title = "Andere verstecken"; ObjectID = "145"; */
+"145.title" = "Andere verstecken";
+
+/* Class = "NSMenuItem"; title = "Alle zeigen"; ObjectID = "150"; */
+"150.title" = "Alle zeigen";
+
+/* Class = "NSWindow"; title = "SelfControl"; ObjectID = "371"; */
+"371.title" = "SelfControl";
+
+/* Class = "NSTextFieldCell"; title = "30 Minuten"; ObjectID = "479"; */
+"479.title" = "30 Minuten";
+
+/* Class = "NSMenuItem"; title = "Blacklist bearbeiten..."; ObjectID = "503"; */
+"503.title" = "Blacklist bearbeiten...";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "505"; */
+"505.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "506"; */
+"506.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "507"; */
+"507.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "509"; */
+"509.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "510"; */
+"510.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "511"; */
+"511.title" = "Item 3";
+
+/* Class = "NSButtonCell"; title = "Start Block"; ObjectID = "542"; */
+"542.title" = "Start Block";
+
+/* Class = "NSButtonCell"; title = "Blacklist bearbeiten"; ObjectID = "544"; */
+"544.title" = "Blacklist bearbeiten";
+
+/* Class = "NSMenuItem"; title = "Einstellungen..."; ObjectID = "614"; */
+"614.title" = "Einstellungen...";
+
+/* Class = "NSMenuItem"; title = "Nach Updates suchen"; ObjectID = "732"; */
+"732.title" = "Nach Updates suchen";
+
+/* Class = "NSMenuItem"; title = "Bearbeiten"; ObjectID = "766"; */
+"766.title" = "Bearbeiten";
+
+/* Class = "NSMenu"; title = "Bearbeiten"; ObjectID = "767"; */
+"767.title" = "Bearbeiten";
+
+/* Class = "NSMenuItem"; title = "Undo"; ObjectID = "768"; */
+"768.title" = "Undo";
+
+/* Class = "NSMenuItem"; title = "Redo"; ObjectID = "769"; */
+"769.title" = "Redo";
+
+/* Class = "NSMenuItem"; title = "Cut"; ObjectID = "771"; */
+"771.title" = "Cut";
+
+/* Class = "NSMenuItem"; title = "Copy"; ObjectID = "772"; */
+"772.title" = "Copy";
+
+/* Class = "NSMenuItem"; title = "Paste"; ObjectID = "773"; */
+"773.title" = "Paste";
+
+/* Class = "NSMenuItem"; title = "Delete"; ObjectID = "775"; */
+"775.title" = "Delete";
+
+/* Class = "NSMenuItem"; title = "Select All"; ObjectID = "776"; */
+"776.title" = "Select All";
+
+/* Class = "NSMenuItem"; title = "Speech"; ObjectID = "780"; */
+"780.title" = "Speech";
+
+/* Class = "NSMenu"; title = "Speech"; ObjectID = "781"; */
+"781.title" = "Speech";
+
+/* Class = "NSMenuItem"; title = "Start Speaking"; ObjectID = "782"; */
+"782.title" = "Start Speaking";
+
+/* Class = "NSMenuItem"; title = "Stop Speaking"; ObjectID = "783"; */
+"783.title" = "Stop Speaking";
+
+/* Class = "NSMenuItem"; title = "Datei"; ObjectID = "865"; */
+"865.title" = "Datei";
+
+/* Class = "NSMenu"; title = "Datei"; ObjectID = "866"; */
+"866.title" = "Datei";
+
+/* Class = "NSMenuItem"; title = "Fenster schließen"; ObjectID = "867"; */
+"867.title" = "Fenster schließen";
+
+/* Class = "NSMenuItem"; title = "Speichern"; ObjectID = "873"; */
+"873.title" = "Speichern";
+
+/* Class = "NSMenuItem"; title = "Öffnen"; ObjectID = "877"; */
+"877.title" = "Öffnen";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "899"; */
+"899.title" = "Help";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "900"; */
+"900.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "SelfControl FAQ"; ObjectID = "901"; */
+"901.title" = "SelfControl FAQ";
+
+/* Class = "NSMenuItem"; title = "Get Started"; ObjectID = "905"; */
+"905.title" = "Get Started";

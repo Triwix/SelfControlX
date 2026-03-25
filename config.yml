@@ -1,0 +1,4 @@
+download_base_url:      'https://downloads.selfcontrolapp.com/'
+web_base_url:           'https://selfcontrolapp.com'
+appcast_xml_name:       'appcast-snippet.xml'
+keychain_privkey_name:  'SelfControl Sparkle Private Key'

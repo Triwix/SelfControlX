@@ -1,0 +1,147 @@
+
+/* Class = "NSMenuItem"; title = "Lägg Alla Överst"; ObjectID = "5"; */
+"5.title" = "Lägg Alla Överst";
+
+/* Class = "NSMenuItem"; title = "Fönster"; ObjectID = "19"; */
+"19.title" = "Fönster";
+
+/* Class = "NSMenuItem"; title = "Minimera"; ObjectID = "23"; */
+"23.title" = "Minimera";
+
+/* Class = "NSMenu"; title = "Fönster"; ObjectID = "24"; */
+"24.title" = "Fönster";
+
+/* Class = "NSMenu"; title = "AMainMenu"; ObjectID = "29"; */
+"29.title" = "AMainMenu";
+
+/* Class = "NSMenuItem"; title = "SelfControl"; ObjectID = "56"; */
+"56.title" = "SelfControl";
+
+/* Class = "NSMenu"; title = "SelfControl"; ObjectID = "57"; */
+"57.title" = "SelfControl";
+
+/* Class = "NSMenuItem"; title = "Om SelfControl"; ObjectID = "58"; */
+"58.title" = "Om SelfControl";
+
+/* Class = "NSMenu"; title = "Tjänster"; ObjectID = "130"; */
+"130.title" = "Tjänster";
+
+/* Class = "NSMenuItem"; title = "Tjänster"; ObjectID = "131"; */
+"131.title" = "Tjänster";
+
+/* Class = "NSMenuItem"; title = "Göm SelfControl"; ObjectID = "134"; */
+"134.title" = "Göm SelfControl";
+
+/* Class = "NSMenuItem"; title = "Avsluta SelfControl"; ObjectID = "136"; */
+"136.title" = "Avsluta SelfControl";
+
+/* Class = "NSMenuItem"; title = "Göm Övriga"; ObjectID = "145"; */
+"145.title" = "Göm Övriga";
+
+/* Class = "NSMenuItem"; title = "Visa Alla"; ObjectID = "150"; */
+"150.title" = "Visa Alla";
+
+/* Class = "NSWindow"; title = "SelfControl"; ObjectID = "371"; */
+"371.title" = "SelfControl";
+
+/* Class = "NSTextFieldCell"; title = "30 minuter"; ObjectID = "479"; */
+"479.title" = "30 minuter";
+
+/* Class = "NSMenuItem"; title = "Redigera Svartlista..."; ObjectID = "503"; */
+"503.title" = "Redigera Svartlista...";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "505"; */
+"505.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "506"; */
+"506.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "507"; */
+"507.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "509"; */
+"509.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "510"; */
+"510.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "511"; */
+"511.title" = "Item 3";
+
+/* Class = "NSButtonCell"; title = "Starta"; ObjectID = "542"; */
+"542.title" = "Starta";
+
+/* Class = "NSButtonCell"; title = "Redigera svartlista"; ObjectID = "544"; */
+"544.title" = "Redigera svartlista";
+
+/* Class = "NSMenuItem"; title = "Inställningar..."; ObjectID = "614"; */
+"614.title" = "Inställningar...";
+
+/* Class = "NSMenuItem"; title = "Sök efter uppdateringar..."; ObjectID = "732"; */
+"732.title" = "Sök efter uppdateringar...";
+
+/* Class = "NSMenuItem"; title = "Redigera"; ObjectID = "766"; */
+"766.title" = "Redigera";
+
+/* Class = "NSMenu"; title = "Redigera"; ObjectID = "767"; */
+"767.title" = "Redigera";
+
+/* Class = "NSMenuItem"; title = "Ångra"; ObjectID = "768"; */
+"768.title" = "Ångra";
+
+/* Class = "NSMenuItem"; title = "Gör Om"; ObjectID = "769"; */
+"769.title" = "Gör Om";
+
+/* Class = "NSMenuItem"; title = "Klipp Ut"; ObjectID = "771"; */
+"771.title" = "Klipp Ut";
+
+/* Class = "NSMenuItem"; title = "Kopiera"; ObjectID = "772"; */
+"772.title" = "Kopiera";
+
+/* Class = "NSMenuItem"; title = "Klistra In"; ObjectID = "773"; */
+"773.title" = "Klistra In";
+
+/* Class = "NSMenuItem"; title = "Ta Bort"; ObjectID = "775"; */
+"775.title" = "Ta Bort";
+
+/* Class = "NSMenuItem"; title = "Markera Allt"; ObjectID = "776"; */
+"776.title" = "Markera Allt";
+
+/* Class = "NSMenuItem"; title = "Tal"; ObjectID = "780"; */
+"780.title" = "Tal";
+
+/* Class = "NSMenu"; title = "Tal"; ObjectID = "781"; */
+"781.title" = "Tal";
+
+/* Class = "NSMenuItem"; title = "Börja Prata"; ObjectID = "782"; */
+"782.title" = "Börja Prata";
+
+/* Class = "NSMenuItem"; title = "Sluta Prata"; ObjectID = "783"; */
+"783.title" = "Sluta Prata";
+
+/* Class = "NSMenuItem"; title = "Arkiv"; ObjectID = "865"; */
+"865.title" = "Arkiv";
+
+/* Class = "NSMenu"; title = "Arkiv"; ObjectID = "866"; */
+"866.title" = "Arkiv";
+
+/* Class = "NSMenuItem"; title = "Stänga fönstret"; ObjectID = "867"; */
+"867.title" = "Stänga fönstret";
+
+/* Class = "NSMenuItem"; title = "Spara"; ObjectID = "873"; */
+"873.title" = "Spara";
+
+/* Class = "NSMenuItem"; title = "Öppna..."; ObjectID = "877"; */
+"877.title" = "Öppna...";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "901"; */
+"901.title" = "Help";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "902"; */
+"902.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "SelfControl FAQ"; ObjectID = "903"; */
+"903.title" = "SelfControl FAQ";
+
+/* Class = "NSMenuItem"; title = "Get Started"; ObjectID = "907"; */
+"907.title" = "Get Started";

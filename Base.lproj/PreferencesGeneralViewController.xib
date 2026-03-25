@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="24506" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="24506"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PreferencesGeneralViewController">
+            <connections>
+                <outlet property="maxBlockLengthField" destination="kUM-x7-K00" id="s2f-yr-Hmx"/>
+                <outlet property="menuBarIconField" destination="Qm0-KI-8z1" id="zRA-7b-KZ6"/>
+                <outlet property="quickBlockDurationsField" destination="nSf-NQ-YvD" id="dP5-r6-EfF"/>
+                <outlet property="sliderIntervalField" destination="KwX-zS-ge6" id="RhX-Y3-Kl7"/>
+                <outlet property="soundMenu" destination="aVc-DN-GnM" id="OAt-VK-bEg"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="520" height="305"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSe-TV-7lB">
+                    <rect key="frame" x="18" y="20" width="484" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Show countdown in Dock" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="deK-DV-3UF">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="4wD-T6-SpY" name="value" keyPath="values.BadgeApplicationIcon" id="nIQ-e7-3Xl"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RmI-NP-U9P">
+                    <rect key="frame" x="18" y="54" width="484" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Timer window should float on top of other windows" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="ZTQ-hm-LIP">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="4wD-T6-SpY" name="value" keyPath="values.TimerWindowFloats" id="3on-wF-5pZ"/>
+                    </connections>
+                </button>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAL-tt-bnj">
+                    <rect key="frame" x="18" y="88" width="189" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Play sound on completion:" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="zMX-XR-Bg2">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="4wD-T6-SpY" name="value" keyPath="values.BlockSoundShouldPlay" id="Kmx-Xr-RfW"/>
+                    </connections>
+                </button>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aVc-DN-GnM">
+                    <rect key="frame" x="204" y="83" width="102" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" inset="2" id="boQ-cQ-XTo">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="message"/>
+                        <menu key="menu" title="OtherViews" id="tjX-Y0-sNd"/>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="soundSelectionChanged:" target="-2" id="jn4-kC-4Y3"/>
+                        <binding destination="4wD-T6-SpY" name="selectedIndex" keyPath="values.BlockSound" id="GDF-4e-Ljl"/>
+                        <binding destination="4wD-T6-SpY" name="enabled" keyPath="values.BlockSoundShouldPlay" id="3II-RK-Syp"/>
+                    </connections>
+                </popUpButton>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YgV-kW-4C0">
+                    <rect key="frame" x="16" y="138" width="145" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Maximum block length:" id="w6S-Rd-v9x">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kUM-x7-K00">
+                    <rect key="frame" x="162" y="136" width="80" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="10,080" bezelStyle="round" id="d9E-XH-Ywe">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="durationPreferenceChanged:" target="-2" id="sh6-xn-Jpe"/>
+                        <binding destination="4wD-T6-SpY" name="value" keyPath="values.MaxBlockLength" id="S4z-H9-qwb"/>
+                    </connections>
+                </textField>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gmH-x2-9yn">
+                    <rect key="frame" x="16" y="166" width="205" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Slider interval:" id="Qg5-8U-iy7">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Un-9I-XPg">
+                    <rect key="frame" x="155" y="165" width="62" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="minute(s)" id="1IJ-1r-ogO">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rqp-Ng-oHX">
+                    <rect key="frame" x="245" y="138" width="62" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="minutes" id="m72-em-rzO">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KwX-zS-ge6">
+                    <rect key="frame" x="109" y="164" width="44" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="5" bezelStyle="round" id="i2Q-ej-vIx">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="durationPreferenceChanged:" target="-2" id="Mnc-HG-Gh0"/>
+                        <binding destination="4wD-T6-SpY" name="value" keyPath="values.BlockDurationSliderIntervalMinutes" id="JDK-i5-fs3"/>
+                    </connections>
+                </textField>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x2H-Na-UPl">
+                    <rect key="frame" x="18" y="267" width="484" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="Show menu bar icon" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="1up-ET-79i">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="menuBarPreferenceChanged:" target="-2" id="W92-Ks-l7q"/>
+                        <binding destination="4wD-T6-SpY" name="value" keyPath="values.EnableMenuBarIcon" id="Evz-4z-BaT"/>
+                    </connections>
+                </button>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m7P-Ax-9Tn">
+                    <rect key="frame" x="16" y="240" width="120" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Menu bar icon text:" id="DCN-jf-j7E">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qm0-KI-8z1">
+                    <rect key="frame" x="139" y="238" width="76" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="ツ" bezelStyle="round" id="viD-eB-jfA">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="menuBarPreferenceChanged:" target="-2" id="6a0-nR-aqA"/>
+                        <binding destination="4wD-T6-SpY" name="value" keyPath="values.MenuBarIconText" id="JiD-SL-zf4"/>
+                    </connections>
+                </textField>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xvi-0B-XkK">
+                    <rect key="frame" x="16" y="213" width="141" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Quick block durations:" id="bq8-R4-vZQ">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nSf-NQ-YvD">
+                    <rect key="frame" x="157" y="211" width="188" height="20"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="left" title="15,30,60,120,180,240,300" bezelStyle="round" id="ZOn-cb-qWj">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="menuBarPreferenceChanged:" target="-2" id="6e9-dM-PXr"/>
+                        <binding destination="4wD-T6-SpY" name="value" keyPath="values.MenuBarQuickBlockDurationsMinutes" id="q0V-NR-dj9"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lai-D6-XZ2">
+                    <rect key="frame" x="297" y="140" width="152" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" title="(up to 7 days or 10,080 min)" id="NHU-Vm-tFK">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XZ1-j4-kET">
+                    <rect key="frame" x="16" y="121" width="489" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" title="________________________________________________________________________________" id="FyX-pR-lMi">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PBx-wY-kJh">
+                    <rect key="frame" x="16" y="196" width="489" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" title="________________________________________________________________________________" id="oaS-xm-6yA">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WSP-TE-nvJ">
+                    <rect key="frame" x="347" y="214" width="157" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingTail" title="(minutes, comma-separated)" id="KAS-Hh-lrQ">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="136" y="-33.5"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="4wD-T6-SpY"/>
+        <dictionaryController objectClassName="_NSDictionaryControllerKeyValuePair" id="lbP-fI-BYl">
+            <classReference key="objectClass" className="_NSDictionaryControllerKeyValuePair"/>
+        </dictionaryController>
+    </objects>
+</document>

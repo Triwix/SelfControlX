@@ -1,0 +1,147 @@
+
+/* Class = "NSMenuItem"; title = "すべてを手前に移動"; ObjectID = "5"; */
+"5.title" = "すべてを手前に移動";
+
+/* Class = "NSMenuItem"; title = "ウィンドウ"; ObjectID = "19"; */
+"19.title" = "ウィンドウ";
+
+/* Class = "NSMenuItem"; title = "縮小"; ObjectID = "23"; */
+"23.title" = "縮小";
+
+/* Class = "NSMenu"; title = "ウィンドウ"; ObjectID = "24"; */
+"24.title" = "ウィンドウ";
+
+/* Class = "NSMenu"; title = "AMainMenu"; ObjectID = "29"; */
+"29.title" = "AMainMenu";
+
+/* Class = "NSMenuItem"; title = "SelfControl"; ObjectID = "56"; */
+"56.title" = "SelfControl";
+
+/* Class = "NSMenu"; title = "SelfControl"; ObjectID = "57"; */
+"57.title" = "SelfControl";
+
+/* Class = "NSMenuItem"; title = "SelfControl について"; ObjectID = "58"; */
+"58.title" = "SelfControl について";
+
+/* Class = "NSMenu"; title = "サービス"; ObjectID = "130"; */
+"130.title" = "サービス";
+
+/* Class = "NSMenuItem"; title = "サービス"; ObjectID = "131"; */
+"131.title" = "サービス";
+
+/* Class = "NSMenuItem"; title = "SelfControl を隠す"; ObjectID = "134"; */
+"134.title" = "SelfControl を隠す";
+
+/* Class = "NSMenuItem"; title = "SelfControl を終了"; ObjectID = "136"; */
+"136.title" = "SelfControl を終了";
+
+/* Class = "NSMenuItem"; title = "ほかを隠す"; ObjectID = "145"; */
+"145.title" = "ほかを隠す";
+
+/* Class = "NSMenuItem"; title = "すべてを表示"; ObjectID = "150"; */
+"150.title" = "すべてを表示";
+
+/* Class = "NSWindow"; title = "SelfControl"; ObjectID = "371"; */
+"371.title" = "SelfControl";
+
+/* Class = "NSTextFieldCell"; title = "30 分"; ObjectID = "479"; */
+"479.title" = "30 分";
+
+/* Class = "NSMenuItem"; title = "ブラックリストの編集..."; ObjectID = "503"; */
+"503.title" = "ブラックリストの編集...";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "505"; */
+"505.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "506"; */
+"506.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "507"; */
+"507.title" = "Item 3";
+
+/* Class = "NSMenuItem"; title = "Item 1"; ObjectID = "509"; */
+"509.title" = "Item 1";
+
+/* Class = "NSMenuItem"; title = "Item 2"; ObjectID = "510"; */
+"510.title" = "Item 2";
+
+/* Class = "NSMenuItem"; title = "Item 3"; ObjectID = "511"; */
+"511.title" = "Item 3";
+
+/* Class = "NSButtonCell"; title = "開始"; ObjectID = "542"; */
+"542.title" = "開始";
+
+/* Class = "NSButtonCell"; title = "ブラックリストの編集"; ObjectID = "544"; */
+"544.title" = "ブラックリストの編集";
+
+/* Class = "NSMenuItem"; title = "環境設定..."; ObjectID = "614"; */
+"614.title" = "環境設定...";
+
+/* Class = "NSMenuItem"; title = "アップデートの確認..."; ObjectID = "732"; */
+"732.title" = "アップデートの確認...";
+
+/* Class = "NSMenuItem"; title = "編集"; ObjectID = "766"; */
+"766.title" = "編集";
+
+/* Class = "NSMenu"; title = "編集"; ObjectID = "767"; */
+"767.title" = "編集";
+
+/* Class = "NSMenuItem"; title = "取り消す"; ObjectID = "768"; */
+"768.title" = "取り消す";
+
+/* Class = "NSMenuItem"; title = "やり直す"; ObjectID = "769"; */
+"769.title" = "やり直す";
+
+/* Class = "NSMenuItem"; title = "カット"; ObjectID = "771"; */
+"771.title" = "カット";
+
+/* Class = "NSMenuItem"; title = "コピー"; ObjectID = "772"; */
+"772.title" = "コピー";
+
+/* Class = "NSMenuItem"; title = "ペースト"; ObjectID = "773"; */
+"773.title" = "ペースト";
+
+/* Class = "NSMenuItem"; title = "削除"; ObjectID = "775"; */
+"775.title" = "削除";
+
+/* Class = "NSMenuItem"; title = "すべてを選択"; ObjectID = "776"; */
+"776.title" = "すべてを選択";
+
+/* Class = "NSMenuItem"; title = "スピーチ"; ObjectID = "780"; */
+"780.title" = "スピーチ";
+
+/* Class = "NSMenu"; title = "スピーチ"; ObjectID = "781"; */
+"781.title" = "スピーチ";
+
+/* Class = "NSMenuItem"; title = "読み上げを開始"; ObjectID = "782"; */
+"782.title" = "読み上げを開始";
+
+/* Class = "NSMenuItem"; title = "読み上げを停止"; ObjectID = "783"; */
+"783.title" = "読み上げを停止";
+
+/* Class = "NSMenuItem"; title = "ファイル"; ObjectID = "865"; */
+"865.title" = "ファイル";
+
+/* Class = "NSMenu"; title = "ファイル"; ObjectID = "866"; */
+"866.title" = "ファイル";
+
+/* Class = "NSMenuItem"; title = "ウィンドウを閉じる"; ObjectID = "867"; */
+"867.title" = "ウィンドウを閉じる";
+
+/* Class = "NSMenuItem"; title = "保存"; ObjectID = "873"; */
+"873.title" = "保存";
+
+/* Class = "NSMenuItem"; title = "開く…"; ObjectID = "877"; */
+"877.title" = "開く…";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "899"; */
+"899.title" = "Help";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "900"; */
+"900.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "SelfControl FAQ"; ObjectID = "901"; */
+"901.title" = "SelfControl FAQ";
+
+/* Class = "NSMenuItem"; title = "Get Started"; ObjectID = "905"; */
+"905.title" = "Get Started";
