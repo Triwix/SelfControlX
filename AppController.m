@@ -92,6 +92,9 @@
 - (NSString*)menuBarActiveTimerString;
 - (NSString*)menuBarDurationTitleForMinutes:(NSInteger)minutes;
 - (void)menuBarRefreshTimerFired:(NSTimer*)timer;
+- (void)ensureRegularActivationPolicy;
+- (void)refreshActivationPolicyForVisibleWindows;
+- (void)handleWindowVisibilityChanged:(NSNotification*)notification;
 - (IBAction)openSelfControlX:(id)sender;
 - (IBAction)quickBlockMenuSelection:(id)sender;
 
@@ -508,6 +511,7 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
 }
 
 - (void)showTimerWindow {
+    [self ensureRegularActivationPolicy];
 	if(timerWindowController_ == nil) {
         [[NSBundle mainBundle] loadNibNamed: @"TimerWindow" owner: self topLevelObjects: nil];
 	} else {
@@ -525,6 +529,7 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
 
 - (IBAction)openPreferences:(id)sender {
     [SCSentry addBreadcrumb: @"Opening preferences window" category: @"app"];
+    [self ensureRegularActivationPolicy];
 	if (preferencesWindowController_ == nil) {
 		NSViewController* generalViewController = [[PreferencesGeneralViewController alloc] init];
 		NSViewController* advancedViewController = [[PreferencesAdvancedViewController alloc] init];
@@ -541,6 +546,7 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
 
 - (IBAction)showGetStartedWindow:(id)sender {
     [SCSentry addBreadcrumb: @"Showing \"Get Started\" window" category: @"app"];
+    [self ensureRegularActivationPolicy];
 	if (!getStartedWindowController) {
 		getStartedWindowController = [[NSWindowController alloc] initWithWindowNibName: @"FirstTime"];
 	}
@@ -620,6 +626,26 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
                                              selector: @selector(handleUserDefaultsChanged:)
                                                  name: NSUserDefaultsDidChangeNotification
                                                object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleWindowVisibilityChanged:)
+                                                 name: NSWindowDidBecomeMainNotification
+                                               object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleWindowVisibilityChanged:)
+                                                 name: NSWindowDidResignMainNotification
+                                               object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleWindowVisibilityChanged:)
+                                                 name: NSWindowWillCloseNotification
+                                               object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleWindowVisibilityChanged:)
+                                                 name: NSWindowDidMiniaturizeNotification
+                                               object: nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleWindowVisibilityChanged:)
+                                                 name: NSWindowDidDeminiaturizeNotification
+                                               object: nil];
 
 	[initialWindow_ center];
     [initialWindow_ setTitle: kSelfControlXWindowTitle];
@@ -659,6 +685,7 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
 	[self refreshUserInterface];
     [self configureMenuBarStatusItem];
     [self refreshMenuBarStatusItem];
+    [self refreshActivationPolicyForVisibleWindows];
     
     NSOperatingSystemVersion fallbackMinVersion = (NSOperatingSystemVersion){10,13,0};
     NSString* minRequiredVersionRaw = [NSBundle.mainBundle objectForInfoDictionaryKey: @"LSMinimumSystemVersion"];
@@ -700,6 +727,7 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
 
 - (IBAction)showDomainList:(id)sender {
     [SCSentry addBreadcrumb: @"Showing domain list" category:@"app"];
+    [self ensureRegularActivationPolicy];
     (void)sender;
     if (self.inlineBlocklistExpanded) {
         [self setInlineBlocklistExpanded: NO animated: NO];
@@ -733,6 +761,7 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
         return NO;
     }
 
+    [self ensureRegularActivationPolicy];
     [NSApp activateIgnoringOtherApps: YES];
     if ([SCUIUtilities blockIsRunning]) {
         [self showTimerWindow];
@@ -741,6 +770,49 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
     }
 
     return YES;
+}
+
+- (void)ensureRegularActivationPolicy {
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self ensureRegularActivationPolicy];
+        });
+        return;
+    }
+    if ([NSApp activationPolicy] != NSApplicationActivationPolicyRegular) {
+        [NSApp setActivationPolicy: NSApplicationActivationPolicyRegular];
+    }
+}
+
+- (void)refreshActivationPolicyForVisibleWindows {
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self refreshActivationPolicyForVisibleWindows];
+        });
+        return;
+    }
+
+    BOOL hasVisibleWindow = NO;
+    for (NSWindow* window in NSApp.windows) {
+        if (window.isVisible) {
+            hasVisibleWindow = YES;
+            break;
+        }
+    }
+
+    NSApplicationActivationPolicy desiredPolicy = hasVisibleWindow
+        ? NSApplicationActivationPolicyRegular
+        : NSApplicationActivationPolicyAccessory;
+    if ([NSApp activationPolicy] != desiredPolicy) {
+        [NSApp setActivationPolicy: desiredPolicy];
+    }
+}
+
+- (void)handleWindowVisibilityChanged:(NSNotification*)notification {
+    (void)notification;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self refreshActivationPolicyForVisibleWindows];
+    });
 }
 
 - (void)addToBlockList:(NSString*)host lock:(NSLock*)lock {
@@ -1739,6 +1811,7 @@ static NSArray<NSString*>* SCMainNormalizedTrustedTimeSourceURLsFromRawValue(id 
 
 - (IBAction)openSelfControlX:(id)sender {
     (void)sender;
+    [self ensureRegularActivationPolicy];
     [NSApp activateIgnoringOtherApps: YES];
     if ([SCUIUtilities blockIsRunning]) {
         [self showTimerWindow];
